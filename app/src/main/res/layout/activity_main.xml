@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <ImageView
@@ -19,37 +19,29 @@
         android:id="@+id/profile_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
         android:hint="@string/profile_description_text"
+        android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
-        tools:layout_editor_absoluteX="173dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
     <LinearLayout
         android:id="@+id/applications_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/profile_description"
         android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/profile_description"
         tools:ignore="MissingConstraints">
-
-        <LinearLayout
-            android:id="@+id/counter_application"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/counter_application_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/counter_application_button_name"/>
-            <TextView
-                android:id="@+id/counter_application_description"
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:hint="@string/counter_application_button_description"/>
-        </LinearLayout>
-
-
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/applications_buttons"
+        tools:listitem="@layout/application_item"
+        android:verticalScrollbarPosition="right"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

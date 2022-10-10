@@ -2,5 +2,5 @@
     <string name="app_name">MyAppVNT</string>
     <string name="counter_application_button_description">Descricao do botão</string>
     <string name="counter_application_button_name">Open counter application</string>
-    <string name="profile_description_text">Set yout profile description here ....</string>
+    <string name="profile_description_text">Profile description</string>
 </resources>
