@@ -26,21 +26,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
-    <LinearLayout
-        android:id="@+id/applications_buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/profile_description"
-        tools:ignore="MissingConstraints">
-    </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/applications_list_recycle_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/applications_buttons"
+        app:layout_constraintTop_toBottomOf="@+id/profile_description"
         tools:listitem="@layout/application_item"
         android:verticalScrollbarPosition="right"/>
 
